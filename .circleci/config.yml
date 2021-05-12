@@ -41,7 +41,7 @@ jobs:
 
   docker-build:
     docker:
-      - image: python:3.8-alpine
+      - image: python:3.8-buster
 
     working_directory: ~/repo
 
