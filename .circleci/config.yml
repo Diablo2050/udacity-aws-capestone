@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
 # Use the same Docker base as the project
-      - image: python:3.8-alpine
+      - image: python:3.8-buster
 
     working_directory: ~/repo
 
@@ -20,7 +20,7 @@ jobs:
     - run:
         name: install dependencies
         command: |
-          apk add --no-cache git make bash
+          #apk add --no-cache git make bash
           python3 -m venv venv
           . venv/bin/activate
           make install
