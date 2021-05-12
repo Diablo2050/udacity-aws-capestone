@@ -41,10 +41,9 @@ jobs:
 
   docker-build:
     docker:
-      - image: python:3.8-buster
-
+      
     working_directory: ~/repo
-
+    machine: true
     steps:
     - checkout
     - run:
