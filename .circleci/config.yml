@@ -20,6 +20,7 @@ jobs:
     - run:
         name: install dependencies
         command: |
+          apk add --no-cache git make bash
           python3 -m venv venv
           . venv/bin/activate
           make install
