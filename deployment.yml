@@ -18,8 +18,7 @@ spec:
     spec:
       containers:
       - name: capstone
-        # image: diablo2050/capestone:${CIRCLE_WORKFLOW_ID:0:7}
-        image: diablo2050/capestone:latest
+        image: diablo2050/capestone:v1
         imagePullPolicy: Always
         resources:
           limits:
