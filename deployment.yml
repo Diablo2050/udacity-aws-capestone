@@ -6,6 +6,11 @@ spec:
   selector:
     matchLabels:
       app: capstone
+  strategy:
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 1
+    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -15,6 +20,7 @@ spec:
       - name: capstone
         # image: diablo2050/capestone:${CIRCLE_WORKFLOW_ID:0:7}
         image: diablo2050/capestone:latest
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "128Mi"
